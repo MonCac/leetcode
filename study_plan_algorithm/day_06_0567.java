@@ -2,10 +2,7 @@ package study_plan_algorithm;
 
 // 字符串的排列
 
-import java.util.HashSet;
-import java.util.Set;
-
-public class No_0567 {
+public class day_06_0567 {
     public static void main(String[] args){
         checkInclusion("ab","eidboaoo");
     }

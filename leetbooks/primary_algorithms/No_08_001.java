@@ -10,12 +10,15 @@ public class No_08_001 {
         List<String> list = new ArrayList<>();
         for(int i = 1; i <= n; i++){
             StringBuffer sb = new StringBuffer();
-            if(i % 3 == 0)
+            if(i % 3 == 0) {
                 sb.append("Fizz");
-            if(i % 5 == 0)
+            }
+            if(i % 5 == 0) {
                 sb.append("Buzz");
-            if(sb.isEmpty())
+            }
+            if(sb.length() == 0) {
                 sb.append(i);
+            }
             list.add(sb.toString());
         }
         return list;
