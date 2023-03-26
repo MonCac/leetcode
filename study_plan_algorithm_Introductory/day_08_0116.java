@@ -1,4 +1,4 @@
-package study_plan_algorithm;
+package study_plan_algorithm_Introductory;
 
 // 填充每个节点的下一个右侧节点指针
 

@@ -1,6 +1,6 @@
-package study_plan_algorithm;
+package study_plan_algorithm_Introductory;
 
-// 删除链表的倒数第N个结点
+// 链表的中间结点
 
 /**
  * Definition for singly-linked list.
@@ -12,7 +12,11 @@ package study_plan_algorithm;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public class day_05_0019 {
+
+
+
+
+public class day_05_0876 {
     public class ListNode {
         int val;
         ListNode next;
@@ -21,19 +25,12 @@ public class day_05_0019 {
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0, head);
-        ListNode first = head;
-        ListNode second = dummy;
-        for (int i = 0; i < n; ++i) {
+    public ListNode middleNode(ListNode head) {
+        ListNode first = head, second = head;
+        while (second != null && second.next!= null) {
             first = first.next;
+            second = second.next.next;
         }
-        while (first != null) {
-            first = first.next;
-            second = second.next;
-        }
-        second.next = second.next.next;
-        ListNode ans = dummy.next;
-        return ans;
+        return first;
     }
 }

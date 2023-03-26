@@ -1,8 +1,6 @@
-package study_plan_algorithm;
+package study_plan_algorithm_Introductory;
 
 // 有序数组的平方
-
-import java.security.SecureRandom;
 
 public class day_02_0977 {
     public static void main(String[] args){

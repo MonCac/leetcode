@@ -1,4 +1,4 @@
-package study_plan_algorithm;
+package study_plan_algorithm_Introductory;
 
 // 二分查找
 

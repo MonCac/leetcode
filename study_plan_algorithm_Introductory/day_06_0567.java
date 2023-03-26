@@ -1,4 +1,4 @@
-package study_plan_algorithm;
+package study_plan_algorithm_Introductory;
 
 // 字符串的排列
 

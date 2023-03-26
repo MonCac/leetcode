@@ -1,4 +1,4 @@
-package study_plan_algorithm;
+package study_plan_algorithm_Introductory;
 
 // 两数之和 II - 输入有序数组
 
