@@ -2,7 +2,7 @@ package study_plan_algorithm_basic;
 
 // 34. 在排序数组中查找元素的第一个和最后一个位置
 
-public class No_001_01 {
+public class No_01_001 {
     public int[] searchRange(int[] nums, int target) {
         int start = binarySearch(nums,target);
         if (start == nums.length || nums[start] != target){
@@ -23,7 +23,7 @@ public class No_001_01 {
                 // 说明[left, mid] < target, 接着判断[mid + 1, right]
                 left = mid + 1;
             }else{
-                // 说明[mid, right] < target, 接着判断[left, mid - 1]
+                // 说明[mid, right] >= target, 接着判断[left, mid - 1]
                 right = mid - 1;
             }
         }
