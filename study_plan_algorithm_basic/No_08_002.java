@@ -2,14 +2,26 @@ package study_plan_algorithm_basic;
 
 // 130. 被围绕的区域
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class No_08_002 {
-    public void solve(char[][] board) {
+    public static void main(String[] args){
+        char[][] board = new char[4][6];
+        board[0] = new char[]{'X','O','X','O','X','O'};
+        board[1] = new char[]{'O','X','O','X','O','X'};
+        board[2] = new char[]{'X','O','X','O','X','O'};
+        board[3] = new char[]{'O','X','O','X','O','X'};
+        solve(board);
+    }
+    public static void solve(char[][] board) {
         int m = board.length;
         int n = board[0].length;
         Boolean[][] isO = new Boolean[m][n];
+        for (int i = 0; i < m; i++){
+            Arrays.fill(isO[i],false);
+        }
         Queue<int[]> queue = new LinkedList<>();
         for (int i = 0; i < m; i++) {
             int j = 0,k = n - 1;
@@ -40,7 +52,7 @@ public class No_08_002 {
                 queue.add(new int[]{a[0] - 1,a[1]});
                 isO[a[0] - 1][a[1]] = true;
             }
-            if (a[0] < n - 1 && board[a[0] + 1][a[1]] == 'O' && !isO[a[0] + 1][a[1]]){
+            if (a[0] < m - 1 && board[a[0] + 1][a[1]] == 'O' && !isO[a[0] + 1][a[1]]){
                 queue.add(new int[]{a[0] + 1,a[1]});
                 isO[a[0] + 1][a[1]] = true;
             }
