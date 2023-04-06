@@ -10,17 +10,17 @@ public class No_01_001 {
     List<List<Integer>> result = new ArrayList<>();
     LinkedList<Integer> path = new LinkedList<>();
     public List<List<Integer>> combine(int n, int k) {
-        backtrack(n,k,1);
+        backTrack(n,k,1);
         return result;
     }
-    public void backtrack(int n, int k, int start){
+    public void backTrack(int n, int k, int start){
         if (path.size() == k){
             result.add(new ArrayList<>(path));
             return;
         }
         for (int i = start; i <= n - k + path.size() + 1; i++){
             path.add(i);
-            backtrack(n,k,i + 1);
+            backTrack(n,k,i + 1);
             path.removeLast();
         }
     }
