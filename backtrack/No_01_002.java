@@ -8,10 +8,10 @@ public class No_01_002 {
     List<List<Integer>> result = new ArrayList<>();
     LinkedList<Integer> path = new LinkedList<>();
     public List<List<Integer>> combinationSum3(int k, int n) {
-        backtrack(k,n,1,0);
+        backTrack(k,n,1,0);
         return result;
     }
-    public void backtrack(int k, int n, int start, int num){
+    public void backTrack(int k, int n, int start, int num){
         if (path.size() == k && num == n){
             result.add(new ArrayList<>(path));
             return;
@@ -19,7 +19,7 @@ public class No_01_002 {
         for (int i = start; path.size() <= k && i < 10 && num + i <= n; i++){
             num += i;
             path.add(i);
-            backtrack(k,n,i + 1,num);
+            backTrack(k,n,i + 1,num);
             path.removeLast();
             num -= i;
         }
