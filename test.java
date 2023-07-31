@@ -1,6 +1,7 @@
 public class test {
     public static void main(String[] args){
-        String a = "abcd";
-        System.out.println(a.substring(0,1));
+        int x = -17;
+        int m = x % 10;
+        System.out.println(m);
     }
 }

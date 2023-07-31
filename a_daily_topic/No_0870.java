@@ -13,7 +13,7 @@ public class No_0870 {
             idx1[i] = i;
             idx2[i] = i;
         }
-        Arrays.sort(idx1, (i, j) -> nums1[i] - nums1[j]); // 就是升序排列
+        Arrays.sort(idx1, (i, j) -> nums1[i] - nums1[j]); // 就是升序排列,注意此时idx1必须是Integer类型，因为Arrays.sort中使用的是泛型
         Arrays.sort(idx2, (i, j) -> nums2[i] - nums2[j]);
         int[] ans = new int[n];
         int left = 0, right = n - 1;
