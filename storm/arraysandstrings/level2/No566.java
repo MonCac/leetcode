@@ -14,6 +14,16 @@ package storm.arraysandstrings.level2;
 
 public class No566 {
     public int[][] matrixReshape(int[][] mat, int r, int c) {
-        return null;
+        int[][] ans = new int[r][c];
+        int  m = mat.length, n = mat[0].length;
+        if (m == r || m * n != r * c) return mat;
+        int sum = 0;
+        for(int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                ans[sum / c][sum % c] = mat[i][j];
+                sum++;
+            }
+        }
+        return ans;
     }
 }
