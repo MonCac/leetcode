@@ -1,6 +1,6 @@
 package programmercarl.greedy;
 
-// 跳跃游戏
+// 55. 跳跃游戏
 
 public class No55 {
     public boolean canJump(int[] nums) {

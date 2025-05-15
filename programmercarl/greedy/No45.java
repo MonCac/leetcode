@@ -1,20 +1,28 @@
 package programmercarl.greedy;
 
-// 跳跃游戏 II
+// 45. 跳跃游戏 II
 
 public class No45 {
-    public int jump(int[] nums) {
+    public static void main(String[] args){
+        jump(new int[]{2,3,1,1,4});
+    }
+    public static int jump(int[] nums) {
         if (nums.length < 2){
             return 0;
         }
         int end = 0;
         int sum = 0;
-        int mix = 0;
+        int max = 0;
         for (int i = 0; i < nums.length; i++){
-            int start = nums[i] + i;
-            if (start > end){
+            if (max < i + nums[i]) {
+                max = i + nums[i];
+                if (max >= nums.length - 1){
+                    return ++sum;
+                }
+            }
+            if (end <= i){
+                end = max;
                 sum++;
-                end = start;
             }
             if (end >= nums.length - 1){
                 break;

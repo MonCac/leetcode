@@ -1,6 +1,6 @@
 package programmercarl.greedy;
 
-// 最大子数组和
+// 53. 最大子数组和
 
 public class No53 {
     public int maxSubArray(int[] nums) {
