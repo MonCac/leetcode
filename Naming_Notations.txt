@@ -15,3 +15,9 @@ Java标识符一般有以下规范
 IDEA快捷键
 command + / 注释
 control + option + I 智能缩进
+
+
+解决git:OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 0问题。取消端口号，修改为自己的端口号
+PS B:\leetcode> git config --global --unset http.proxy
+PS B:\leetcode> git config --global --unset https.proxy
+PS B:\leetcode> git config --global http.proxy http://127.0.0.1:7890
