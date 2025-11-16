@@ -27,7 +27,6 @@ public class No_101 {
         TreeNode n3  = new TreeNode(2, null, n6);
         TreeNode n2  = new TreeNode(2, n4, null);
         TreeNode n1  = new TreeNode(5, n2, n3);
-        boolean h = isSymmetric(n1);
     }
     public boolean isSymmetric(TreeNode root) {
         return check(root.left, root.right);
