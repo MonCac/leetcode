@@ -1,7 +1,5 @@
 package hot100.binarytree;
 
-import com.sun.source.tree.Tree;
-
 public class No_98 {
     class TreeNode{
         int val;
