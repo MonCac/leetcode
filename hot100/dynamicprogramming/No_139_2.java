@@ -5,8 +5,8 @@ import java.util.*;
 public class No_139_2 {
     public boolean wordBreak(String s, List<String> wordDict) {
         Set<String> set = new HashSet<>();
-        for (int i = 0; i < wordDict.size(); i++){
-            set.add(wordDict.get(i));
+        for (String string : wordDict) {
+            set.add(string);
         }
         boolean[] f = new boolean[s.length() + 1];
         f[0] = true;
